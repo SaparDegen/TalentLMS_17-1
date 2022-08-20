@@ -3,7 +3,10 @@ import java.util.Arrays;
 public class Farm {
     private String ownerName;
     private String address;
-    private DomesticAnimal[] animals;
+    private Sheep[] sheeps;
+    private Cow[] cows;
+    private Horse[] horses;
+
 
     public Farm(String ownerName, String address){
         this.ownerName = ownerName;
@@ -26,12 +29,28 @@ public class Farm {
         this.address = address;
     }
 
-    public DomesticAnimal[] getAnimals() {
-        return animals;
+    public Sheep[] getSheeps() {
+        return sheeps;
     }
 
-    public void setAnimals(DomesticAnimal[] animals) {
-        this.animals = animals;
+    public void setSheeps(Sheep[] sheeps) {
+        this.sheeps = sheeps;
+    }
+
+    public Cow[] getCows() {
+        return cows;
+    }
+
+    public void setCows(Cow[] cows) {
+        this.cows = cows;
+    }
+
+    public Horse[] getHorses() {
+        return horses;
+    }
+
+    public void setHorses(Horse[] horses) {
+        this.horses = horses;
     }
 
     @Override
@@ -39,7 +58,9 @@ public class Farm {
         return "Farm{" +
                 "ownerName='" + ownerName + '\'' +
                 ", address='" + address + '\'' +
-                ", animals=" + Arrays.toString(animals) +
+                ", sheeps=" + Arrays.toString(sheeps) +
+                ", cows=" + Arrays.toString(cows) +
+                ", horses=" + Arrays.toString(horses) +
                 '}';
     }
 }
